@@ -37,12 +37,15 @@ export interface PostsPageProps {
   posts: PostProps[];
 }
 
+export interface Address {
+  street: string;
+  city: string;
+  // add more if needed (zipcode, suite, etc)
+
+}
 export interface UserProps {
   id: number;
   name: string;
   email: string;
-  address: {
-    street: string;
-    city: string;
-  }
-};
+  address: Address;
+}

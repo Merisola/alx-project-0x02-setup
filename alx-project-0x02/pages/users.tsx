@@ -1,3 +1,4 @@
+// pages/users.tsx
 import React from "react";
 import { UserProps } from "@/interfaces";
 import UserCard from "@/components/common/UserCard";
@@ -11,21 +12,28 @@ const UsersPage: React.FC<UsersPageProps> = ({ users }) => {
     <div className="p-4">
       <h1 className="text-2xl font-bold mb-4">User List</h1>
       {users.map((user) => (
-        <UserCard key={user.id} user={user} />
+        <UserCard
+          key={user.id}
+          id={user.id}
+          name={user.name}
+          email={user.email}
+          address={user.address}
+        />
       ))}
     </div>
   );
 };
 
-export const getStaticProps = async () => {
+// Fetch user data at build time
+export async function getStaticProps() {
   const res = await fetch("https://jsonplaceholder.typicode.com/users");
-  const data = await res.json();
+  const users: UserProps[] = await res.json();
 
   return {
     props: {
-      users: data,
+      users,
     },
   };
-};
+}
 
 export default UsersPage;
