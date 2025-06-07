@@ -5,7 +5,7 @@ import PostModal from "@/components/common/PostModal";
 const HomePage = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [posts, setPosts] = useState([
-    { title: "Meriye", content: "Welcome to our blog!" },
+    { title: "Meriye", content: "Welcome to your blog!" },
   ]);
 
   const handleAddPost = (newPost: { title: string; content: string }) => {
