@@ -1,11 +1,11 @@
-import Header from "@/components/layout/Header"
 import HomePage from "./home";
 
-export default function Home() {
+const  Home = () => {
   return (
     <div>
-      <Header />
       <HomePage />
     </div>
   );
 }
+
+export default Home;
