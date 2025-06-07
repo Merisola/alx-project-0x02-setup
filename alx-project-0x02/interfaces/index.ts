@@ -20,3 +20,15 @@ export interface ButtonProps {
   shape: "rounded-sm" | "rounded-md" | "rounded-full";
   onClick?: () => void;
 }
+
+export interface PostCardProps {
+  title: string;
+  content: string;
+  userId: number;
+}
+
+export interface PostProps {
+  title: string;
+  content: string;
+  userId: number;
+}
