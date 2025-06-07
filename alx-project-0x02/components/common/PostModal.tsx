@@ -17,7 +17,7 @@ const PostModal: React.FC<PostModalProps> = ({ isOpen, onClose, onSubmit }) => {
 
   // ✅ Make sure the return is inside this function
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 text-black">
       <div className="bg-white p-6 rounded-md w-96 shadow-md">
         <h2 className="text-lg font-bold mb-4">Add a New Post</h2>
         <form onSubmit={handleSubmit}>

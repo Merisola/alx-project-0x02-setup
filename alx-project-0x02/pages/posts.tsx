@@ -11,7 +11,7 @@ const PostsPage: React.FC<PostsPageProps> = ({ posts }) => {
   return (
     <div>
       <Header />
-      <main className="p-6">
+      <main className="p-6 text-gray-400">
         <h1 className="text-2xl font-bold mb-4">Posts</h1>
         {posts.map((post) => (
           <PostCard
