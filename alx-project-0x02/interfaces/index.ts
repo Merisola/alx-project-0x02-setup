@@ -44,5 +44,5 @@ export interface UserProps {
   address: {
     street: string;
     city: string;
-  };
-}
+  }
+};
